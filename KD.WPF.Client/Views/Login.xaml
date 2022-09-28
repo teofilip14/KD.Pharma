@@ -1,0 +1,45 @@
+﻿<Window x:Class="KD.WPF.Client.Views.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d"
+    Title="Login" Height="317" Width="500"
+        ResizeMode="NoResize">    
+    <Grid Width="500" Height="300">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF286EE0" Offset="0.52"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button  Content="Login" HorizontalAlignment="Center" Height="30" Margin="0,225,0,0" VerticalAlignment="Top" Width="60" Command="{Binding LoginCommand}" RenderTransformOrigin="0.483,1.035" FontWeight="Bold" Foreground="White" BorderBrush="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="12"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF286EE0" Offset="0.52"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Username :" HorizontalAlignment="Left" Margin="50,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.763,-0.73" FontWeight="Bold" Width="75" Height="25" Foreground="White"/>
+        <Label Content="Password :" HorizontalAlignment="Left" Margin="50,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.764,0.886" FontWeight="Bold" Width="75" Height="25" Foreground="White"/>
+        <Image HorizontalAlignment="Center" Height="30" Margin="0,10,0,0" VerticalAlignment="Top" Width="100" Source="/Views/kronsoft-development-logo.png"/>
+
+        <PasswordBox x:Name="txtPassword" PasswordChanged="txtPassword_PasswordChanged" HorizontalAlignment="Right" Margin="0,0,50,0" VerticalAlignment="Center" Width="75" Height="25" FontWeight="Bold" Foreground="White" Background="{x:Null}" BorderBrush="White"/>
+
+        <TextBox Text="{Binding Username}" HorizontalAlignment="Right" Margin="375,60,50,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Height="25" BorderBrush="White" FontWeight="Bold" Foreground="White">
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        
+    </Grid>
+
+</Window>
